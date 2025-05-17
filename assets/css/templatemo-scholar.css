@@ -1546,6 +1546,36 @@ Contact Style
   z-index: 2;
 }
 
+.contact-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.contact-icons .icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #ff6600;
+  background: #fff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  text-decoration: none;
+  border: 2px solid #ff6600;
+}
+  .contact-icons .icon-link:hover {
+  background: #ff6600;
+  color: #fff;
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 4px 16px rgba(255,102,0,0.15);
+  border-color: #ff6600;
+}
+
 #contact-form input {
   width: 100%;
   height: 50px;
@@ -1904,5 +1934,29 @@ body {
   }
   .fun-facts:before {
     width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-icons {
+    gap: 12px;
+    justify-content: flex-start;
+  }
+  .contact-icons .icon-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 400px) {
+  .contact-icons {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .contact-icons .icon-link {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
   }
 }
